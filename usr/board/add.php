@@ -11,8 +11,9 @@ require_once __DIR__ . '/../../head.php';
         <hr>
     </div>
     <div>
+    <h1>&lt;BOARD ADD&gt;</h1>
+    <hr>
         <form method="POST" action="doAdd.php">
-            <h2> 게시판 상세내용 </h2>
             <table>
                 <tr>
                     <td>게시판 이름</td>

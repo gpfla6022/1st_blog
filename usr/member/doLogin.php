@@ -1,6 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/webinit.php';
 
+$pageTitle = "MEMBER LOGIN";
+
 $memId = $_POST['memId'];
 $memPW = $_POST['memPW'];
 

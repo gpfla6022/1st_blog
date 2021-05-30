@@ -1,7 +1,8 @@
 <?php
-
 require_once $_SERVER['DOCUMENT_ROOT'] . '/webinit.php';
 # $_SERVER['DOCUMENT_ROOT'] => htdocs, '/webinit.php' 은 htdocs에 들어있으므로 나갈필요 없음.
+
+$pageTitle = "MEMBER MODIFY";
 
 $memberId = $_SERVER['logonmember'];
 

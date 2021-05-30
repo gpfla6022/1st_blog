@@ -1,7 +1,8 @@
 <?php
-
 # 초기화 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/webinit.php';
+
+$pageTitle = "MEMBER DELETE";
 
 # 회원번호 색인
 $id = $_SESSION['logonMember'];
@@ -17,11 +18,11 @@ SET `regDate` = '',
 `memName` = '',
 `memNick` = '',
 `memPHNum` = '',
-`delStatus` = True,
+`delStatus` = True
 WHERE `id` = $id
 ";
 
-DB__delete($sql);
+DB_update($sql);
 
 session_unset();
 

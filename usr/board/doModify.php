@@ -2,22 +2,24 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/webinit.php';
 # $_SERVER['DOCUMENT_ROOT'] => htdocs, '/webinit.php' 은 htdocs에 들어있으므로 나갈필요 없음.
-$pageTitle = "BOARD ADD";
 
+$pageTitle = "BOARD MODIFY";
+
+$id = $_POST['id'];
 $name = $_POST['name'];
 $boardCode = $_POST['boardCode'];
 
-
 $sql = "
-INSERT INTO board
+UPDATE `board`
 SET `name` = '$name',
 boardCode = '$boardCode',
-regDate = NOW(),
-updateDate = now()
+updateDate = NOW()
+WHERE `id` = $id;
 ";
 
-DB_insert($sql);
+DB_update($sql);
 
-
-jsLocationReplaceExit('/usr/board/list.php', "게시판이 생성되었습니다.");
+jsLocationReplaceExit('/usr/board/list.php', "게시판이 수정되었습니다.");
 ?>
+
+

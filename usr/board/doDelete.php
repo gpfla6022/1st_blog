@@ -1,5 +1,7 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/webinit.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/webinit.php';
+
+$pageTitle = "BOARD DELETE";
 
 $id = $_GET['id'];
 
@@ -9,12 +11,6 @@ WHERE board.id = $id;
 ";
 
 DB_delete($sql);
-?>
-<?php
-require_once __DIR__ . '/../../head.php';
-?>
 
- 
-<?php
-require_once __DIR__ . '/../../foot.php';
+jsLocationReplaceExit('/usr/board/list.php', "게시판이 삭제되었습니다.");
 ?>
