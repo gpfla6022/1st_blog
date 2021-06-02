@@ -29,6 +29,7 @@ $board = DB_getRow($boardsql);
     <hr>
     <a href="write.php?boardId=<?=$boardIndex?>"><input type="button" value = "게시물 작성"></a>
     <a href="/usr/board/list.php"><input type="button" value = "게시판으로 돌아가기"></a>
+    <hr>
     <?php foreach($articles as $article) {?>
     <?php if($board['id'] == $article['boardIndex']) { ?><br>
         게시판 번호 : <?=$board['id']?><br>

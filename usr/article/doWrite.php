@@ -2,9 +2,16 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/webinit.php';
 $pageTitle = "ARTICLE WRITE";
 
-$title = $_POST['title'];
-$body =$_POST['body'];
+$title = getStringValueOr($_POST['title'], 0);
+$body =getStringValueOr($_POST['body'], 0);
 
+if(!$title){
+  jsHistoryBackExit("제목을 입력해주세요.");
+}
+
+if(!$body){
+  jsHistoryBackExit("내용을 입력해주세요.");
+}
 
 $boardIndex = $_POST['boardIndex'];
 $memIndex = $_SESSION['logonMember']; # member['id']

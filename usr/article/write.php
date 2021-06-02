@@ -1,5 +1,6 @@
 <?php 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/webinit.php'; 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/logincheck.php';
 
 $pageTitle = "ARTICLE WRITE";
 

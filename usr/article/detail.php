@@ -8,7 +8,11 @@ require_once __DIR__ . "/../../head.php";
 
 $id = $_GET['id'];
 
-$articleId = $_GET['id'];
+$articleId = getIntValueOr($_GET['id'], 0);
+
+#if($article == 0){
+#    jsHistoryBackExit("게시물 번호를 입력해 주세요");
+#}
 
 $sql = "
 SELECT *  
@@ -17,6 +21,10 @@ WHERE article.id = $articleId;
 ";
 
 $article = DB_getRow($sql);
+
+#if($article == 0){
+ #   jsHistoryBackExit("${articleId}번 게시물이 존재하지 않습니다.");
+#}
 
 $replySql = "
 SELECT * 

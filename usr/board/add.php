@@ -7,12 +7,12 @@ require_once __DIR__ . '/../../head.php';
 ?>
 <section>
     <div>
-        <a href="/index.php"><input type="button" value="메인으로 돌아가기"></a>
-        <hr>
-    </div>
-    <div>
     <h1>&lt;BOARD ADD&gt;</h1>
     <hr>
+    </div>
+    <div>
+    <a href="/index.php"><input type="button" value="메인으로 돌아가기"></a>
+        <hr>
         <form method="POST" action="doAdd.php">
             <table>
                 <tr>

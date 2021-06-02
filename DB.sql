@@ -73,12 +73,6 @@ boardCode = 'free',
 regDate = NOW(),
 updateDate = NOW();
 
-UPDATE board
-SET `name` = ,
-boardCode = ,
-updateDate = NOW()
-WHERE id = ;
-
 
 CREATE TABLE article(
     id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -89,42 +83,6 @@ CREATE TABLE article(
     memId INT(10) UNSIGNED NOT NULL,
     boardIndex INT(10) UNSIGNED NOT NULL
 );
-
-
-SELECT *  
-FROM article;
-
-
-
-INSERT INTO article
-SET title = '제목1',
-`body` = '내용1',
-regDate = NOW(),
-updateDate = NOW();
-
-INSERT INTO article
-SET title = '제목2',
-`body` = '내용2',
-regDate = NOW(),
-updateDate = NOW();
-
-INSERT INTO article
-SET title = '제목3',
-`body` = '내용3',
-regDate = NOW(),
-updateDate = NOW();
-
-INSERT INTO article
-SET title = '제목4',
-`body` = '내용4',
-regDate = NOW(),
-updateDate = NOW();
-
-INSERT INTO article
-SET title = '제목5',
-`body` = '내용5',
-regDate = NOW(),
-updateDate = NOW();
 
 
 SELECT * FROM article;
@@ -142,11 +100,11 @@ CREATE TABLE reply (
 SELECT * FROM reply;
 
 
-UPDATE board
-SET `name` =,
-boardCode = ,
-regDate = NOW()
-WHERE board.id = ;
-
-SELECT * 
-FROM article;
+<div>
+    <a href="/usr/member/join.php"><input type="button" value = "회원가입"></a>
+    <a href="/usr/member/login.php"><input type="button" value = "로그인"></a>
+    <a href="/usr/member/logout.php"><input type="button" value = "로그아웃"></a>
+    <a href="/usr/member/modify.php"><input type="button" value = "수정"></a>
+    <a href="/usr/member/doDelete.php"><input type="button" value = "탈퇴"></a>
+    <a href="/usr/board/add.php"><input type="button" value ="게시판 생성"></a>
+</div>

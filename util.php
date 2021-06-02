@@ -85,6 +85,4 @@ function getStringValueOr($value, $defaultValue){
     return $defaultValue;
 }
 
-
-
 ?>

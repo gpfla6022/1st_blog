@@ -5,9 +5,23 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/webinit.php';
 
 $pageTitle = "BOARD MODIFY";
 
-$id = $_POST['id'];
-$name = $_POST['name'];
-$boardCode = $_POST['boardCode'];
+$id = getIntValueOr($_POST['id'], 0);
+
+if($id == 0){
+  jsHistoryBackExit("게시판 번호를 입력해 주세요.");
+}
+
+$name = getStringValueOr($_POST['name'], 0);
+$boardCode = getStringValueOr($_POST['boardCode'], 0);
+
+if(!$name){
+  jsHistoryBackExit("제목을 입력해 주세요.");
+}
+
+if(!$boardCode){
+  jsHistoryBackExit("제목을 입력해 주세요.");
+}
+
 
 $sql = "
 UPDATE `board`
